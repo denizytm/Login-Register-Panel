@@ -1,0 +1,38 @@
+
+<h1>USERS</h1>
+
+
+<table>
+
+
+
+<% for(var [index, value] of users.entries()) { %>
+
+    <tr>
+
+        <td>
+            
+
+        -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        <h3><%= ++index %>. User </h3>
+
+        <p> Name : <%= value.name %> </p> <p> Last Name : <%= value.lastname %> </p> <p> Email : <%= value.email  %> </p> <p> Username : <%= value.username %> </p> <p> Password : <%= value.password %> </p> 
+    
+        <a onclick="function deleteUser(value) {
+
+            value.remove();
+
+        }" href="/login/deleteUser/<%=value.name%>">Delete the User </a>
+
+        -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        </td>
+
+    </tr>
+
+<% } %>
+
+
+
+</table>
